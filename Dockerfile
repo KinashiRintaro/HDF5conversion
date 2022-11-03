@@ -1,4 +1,4 @@
-FROM python:3.8.6
+FROM python:3.6.1
 USER root
 
 RUN apt-get update
@@ -15,4 +15,5 @@ RUN apt-get install -y vim less
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
-RUN pip install h5py numpy pandas pillow
+RUN pip install h5py:2.7.0
+RUN pip install numpy pandas pillow

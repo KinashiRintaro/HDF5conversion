@@ -19,11 +19,11 @@ with h5py.File("mdmp-app.hdf5", "w") as f:
     #     )
     dset = g_monipad.create_dataset(
         name="monipad_active_energy_burneds", 
-        shape=(5,4), 
-        dtype=h5py.special_dtype(vlen=str)
+        shape=(2,), 
+        dtype=str_dtype
         )
-    dset[0, 0] = "one peace"
-    dset[0, 1] = "あああ"
+    dset[0] = "one peace"
+    dset[1] = 'あいう'
 
     # 以下の記述でg_monipadに属するデータセットの数がデバック可能
     # print(g_monipad)
